@@ -17,7 +17,6 @@ Bu program, Red-Black Tree veri yapısı ve grafik (graph) temelli arkadaşlık 
 
 ## ▶️ Derleme ve Çalıştırma
 
-```bash
 gcc sosyal_ag.c -o sosyal_ag
 ./sosyal_ag
 
@@ -53,5 +52,60 @@ Toplam Etki Alani: 3 kullanici
 
 6. Topluluk Tespiti
 Topluluk: 1 2 3
+
+Kac kullanici eklemek istersiniz? 3
+Kullanici ID girin: 1
+Kullanici ID girin: 2
+Kullanici ID girin: 3
+
+🚰 Fonksiyon Açıklamaları
+
+Fonksiyon
+
+Açıklama
+
+kullanici_ekle() Yeni kullanıcı oluşturur ve Red-Black Tree'ye ekler
+
+
+arkadaslik_ekle() İki kullanıcı arasında arkadaşlık bağlantısı kurar.
+
+
+dfs():Derinlik bazlı arkadaş taraması yapar.
+
+
+ortak_arkadas(): İki kullanıcının ortak arkadaşlarını listeler.
+
+
+etki_alani(): Belirli bir kullanıcıdan ulaşılabilecek kullanıcı sayısını verir.
+
+
+topluluk_tespiti(): Bir kullanıcı ile bağlantılı topluluğu (connected component) yazdırır.
+
+
+dosyaya_yaz():Kullanıcı ve arkadaşlık ilişkilerini dosyaya yazar.
+
+
+
+📌 Notlar
+
+Maksimum kullanıcı sayısı: 100 (#define MAX_KULLANICI 100)
+
+Dosya çıktısı sayesinde ağ verisi dış sistemlerde de kullanılabilir.
+
+Renkli düğümler ve döndürmelerle Red-Black Tree dengeli kalır.
+
+Hafıza yönetimi manuel yapılmaktadır (malloc).
+
+📣 Geliştirilebilir Özellikler
+
+Bellek boşaltma (free) eklenebilir.
+
+Etki alanı ve DFS için görselleştirme desteği sağlanabilir.
+
+Kullanıcılar isim, yaş gibi diğer bilgilerle genişletilebilir.
+
+Dosyadan veri alma (parse) özelliği eklenebilir.
+
+
 
 
