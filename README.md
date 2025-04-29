@@ -20,5 +20,34 @@ Red-Black Tree: Kullanıcılar, benzersiz ID’leriyle bu dengeli arama ağacın
 
 Graph (Adjacency List): Kullanıcıların arkadaşları ağı şeklinde temsil edilir.
 
-gcc sosyal_ag.c -o sosyal_ag_anayol_ag
+👣 Kullanım Akışı
+Kullanıcı ve Arkadaşlık Girişi:
+
+Kullanıcı eklemek istenir: 3 kullanıcı ID girilir → 1. Kullanıcı ID → 2. Kullanıcı ID → 3. Kullanıcı ID
+
+Arkadaşlık Tamamlama:
+
+Kaç arkadaşlık ilişkisi tanımlanacak?
+
+2 arkadaş ID girilir → 1. kullanıcı → 2. kullanıcı
+
+DFS ile Arkadaşlık İlişkisi Analizi:
+
+Kaç defa yapılacak?
+
+Her analiz için 2 kullanıcı ID girilir.
+
+Ortak Arkadaşlar:
+
+2 kullanıcı ID girilir.
+
+Belli Arama Mesafesi:
+
+Kaç işlem yapılacak?
+
+Her işlemde 3 kullanıcı ID girilir.
+
+Topluluk Tespiti:
+
+Topluluk sayısı belirlenir.
 
