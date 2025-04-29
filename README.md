@@ -14,3 +14,11 @@ Belirli kullanıcılar arasındaki bağlantı sayısı hesaplanır.
 Topluluk (community) tespiti yapılır.
 
 Tüm kullanıcılar ve ilişkileri .txt dosyasına kaydedilir.
+
+🗂 Kullanılan Veri Yapıları
+Red-Black Tree: Kullanıcılar, benzersiz ID’leriyle bu dengeli arama ağacına eklenir.
+
+Graph (Adjacency List): Kullanıcıların arkadaşları ağı şeklinde temsil edilir.
+
+gcc sosyal_ag.c -o sosyal_ag_anayol_ag
+
