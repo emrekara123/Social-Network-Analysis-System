@@ -1,53 +1,25 @@
-Bu program, Red-Black Tree veri yapısı ve grafik (graph) temelli arkadaşlık bağlantılarını kullanarak geliştirilen bir sosyal ağ analiz sistemidir. Kullanıcılar ve onların arkadaşlık ilişkileri üzerinden çeşitli analizler yapılmasını sağlar.
+# 👥 Sosyal Ağ Tabanlı Kullanıcı Yönetim ve Analiz Sistemi
 
-🧾 Program Özeti
-Kullanıcılar Red-Black Tree yapısına aktarılır.
+Bu program, Red-Black Tree veri yapısı kullanılarak kullanıcıların yönetimi ve sosyal ağ üzerindeki arkadaşlık ilişkileri analiz edilir. Topluluk tespiti gibi analizleri yapar. Bu çıktılar oluşturulan veriler `.txt` dosyasına kaydedilir.
 
-Kullanıcılar arası doğrudan ve dolaylı arkadaşlık bağlantıları kurulur.
+---
 
-DFS ile grafik analizi yapılır.
+## ⚙️ Özellikler
 
-Ortak arkadaşlar listelenir.
+- Red-Black Tree ile kullanıcı ekleme ve arama
+- Arkadaşlık ilişkileri tanımlama
+- DFS ile derinlik tabanlı dolaşım
+- Ortak arkadaş analizi
+- Etki alanı (influence area) hesaplama
+- Topluluk tespiti
+- Verileri dosyaya kaydetme ve güncelleme
 
-Belirli kullanıcılar arasındaki bağlantı sayısı hesaplanır.
+---
 
-Topluluk (community) tespiti yapılır.
+## 1. 👤 Kullanıcı ve Arkadaşlık Tanımı
 
-Tüm kullanıcılar ve ilişkileri .txt dosyasına kaydedilir.
+Kullanıcı sayısı ve her bir kullanıcı için ID bilgisi alındıktan sonra, arkadaşlık ilişkileri tanımlanır.
 
-🗂 Kullanılan Veri Yapıları
-Red-Black Tree: Kullanıcılar, benzersiz ID’leriyle bu dengeli arama ağacına eklenir.
+![image](https://github.com/user-attachments/assets/06ab79f8-6653-4b08-a0bf-9aae47db188a)
 
-Graph (Adjacency List): Kullanıcıların arkadaşları ağı şeklinde temsil edilir.
-
-👣 Kullanım Akışı
-Kullanıcı ve Arkadaşlık Girişi:
-
-Kullanıcı eklemek istenir: 3 kullanıcı ID girilir → 1. Kullanıcı ID → 2. Kullanıcı ID → 3. Kullanıcı ID
-
-Arkadaşlık Tamamlama:
-
-Kaç arkadaşlık ilişkisi tanımlanacak?
-
-2 arkadaş ID girilir → 1. kullanıcı → 2. kullanıcı
-
-DFS ile Arkadaşlık İlişkisi Analizi:
-
-Kaç defa yapılacak?
-
-Her analiz için 2 kullanıcı ID girilir.
-
-Ortak Arkadaşlar:
-
-2 kullanıcı ID girilir.
-
-Belli Arama Mesafesi:
-
-Kaç işlem yapılacak?
-
-Her işlemde 3 kullanıcı ID girilir.
-
-Topluluk Tespiti:
-
-Topluluk sayısı belirlenir.
 
