@@ -1,111 +1,93 @@
-Bu program, Red-Black Tree veri yapısı ve grafik (graph) temelli arkadaşlık bağlantıları kullanılarak geliştirilen bir sosyal ağ analiz sistemidir. Kullanıcılar ve onların arkadaşlık ilişkileri üzerinden çeşitli analizler yapılmasını sağlar.
+Bu program, Red-Black Tree veri yapısı ve grafik (graph) temelli arkadaşlık bağlantılarını kullanarak geliştirilen bir sosyal ağ analiz sistemidir. Kullanıcılar ve onların arkadaşlık ilişkileri üzerinden çeşitli analizler yapılmasını sağlar.
 
-## 📌 Program Özeti
+🧾 Program Özeti
+Kullanıcılar Red-Black Tree yapısına aktarılır.
 
-- Kullanıcılar Red-Black Tree yapısında saklanır.
-- Kullanıcılar arasında çift yönlü arkadaşlık bağlantıları kurulur.
-- DFS ile derinlik bazlı arkadaş keşfi yapılır.
-- Ortak arkadaşlar listelenir.
-- Etki alanı (etkileyebileceği kullanıcı sayısı) hesaplanır.
-- Topluluk tespiti ile bağlantılı bileşenler belirlenir.
-- Tüm kullanıcı ve arkadaşlık ilişkileri `veriseti.txt` dosyasına kaydedilir.
+Kullanıcılar arası doğrudan ve dolaylı arkadaşlık bağlantıları kurulur.
 
-## 🧱 Kullanılan Veri Yapıları
+DFS ile grafik analizi yapılır.
 
-- **Red-Black Tree**: Kullanıcılar, benzersiz ID’leriyle bu dengeli arama ağacına eklenir.
-- **Graph (Adjacency List)**: Kullanıcıların arkadaşları sabit boyutlu dizilerde tutulur.
+Ortak arkadaşlar listelenir.
 
-## ▶️ Derleme ve Çalıştırma
+Belirli kullanıcılar arasındaki bağlantı sayısı hesaplanır.
 
-gcc sosyal_ag.c -o sosyal_ag
-./sosyal_ag
+Topluluk (community) tespiti yapılır.
 
-💡 Kullanım Akışı
+Tüm kullanıcılar ve ilişkileri .txt dosyasına kaydedilir.
 
-1. Kullanıcı ve Arkadaşlık Girişi
-Kac kullanici eklemek istersiniz? 3
-Kullanici ID girin: 1
-Kullanici ID girin: 2
-Kullanici ID girin: 3
+🗂 Kullanılan Veri Yapıları
+Red-Black Tree: Kullanıcılar, benzersiz ID’leriyle bu dengeli arama ağacına eklenir.
 
-2. Arkadaşlık Tanımlama
-Kac arkadaslik iliskisi tanimlanacak? 2
-Arkadaslik (id1 id2): 1 2
-Arkadaslik (id1 id2): 2 3
+Graph (Adjacency List): Kullanıcıların arkadaşları ağı şeklinde temsil edilir.
 
-3. DFS ile Arkadaş Listeleme
-Baslangic kullanici ID: 1
-Kullanici 1 derinlik 0
-Kullanici 2 derinlik 1
-Kullanici 3 derinlik 2
+🛠 Derleme ve Çalıştırma
+bash
+Kopyala
+Düzenle
+gcc sosyal_ag.c -o sosyal_ag_anayol_ag
+👣 Kullanım Akışı
+Kullanıcı ve Arkadaşlık Girişi:
 
-4. Ortak Arkadaşlar
-Ortak arkadas analizi icin iki kullanici ID girin (ID1 ID2): 1 3
-Ortak Arkadaslar: 2
+Kullanıcı eklemek istenir: 3 kullanıcı ID girilir → 1. Kullanıcı ID → 2. Kullanıcı ID → 3. Kullanıcı ID
 
-5. Etki Alanı Hesaplama
-Etki alani hesaplamak icin bir kullanici ID girin: 1
-Kullanici 1 derinlik 0
-Kullanici 2 derinlik 1
-Kullanici 3 derinlik 2
-Toplam Etki Alani: 3 kullanici
+Arkadaşlık Tamamlama:
 
-6. Topluluk Tespiti
-Topluluk: 1 2 3
+Kaç arkadaşlık ilişkisi tanımlanacak?
 
-Kac kullanici eklemek istersiniz? 3
-Kullanici ID girin: 1
-Kullanici ID girin: 2
-Kullanici ID girin: 3
+2 arkadaş ID girilir → 1. kullanıcı → 2. kullanıcı
 
-🚰 Fonksiyon Açıklamaları
+DFS ile Arkadaşlık İlişkisi Analizi:
 
-Fonksiyon
+Kaç defa yapılacak?
 
+Her analiz için 2 kullanıcı ID girilir.
+
+Ortak Arkadaşlar:
+
+2 kullanıcı ID girilir.
+
+Belli Arama Mesafesi:
+
+Kaç işlem yapılacak?
+
+Her işlemde 3 kullanıcı ID girilir.
+
+Topluluk Tespiti:
+
+Topluluk sayısı belirlenir.
+
+🔧 Fonksiyon Açıklamaları
 Açıklama
+kullanici_ekle(): Yeni kullanıcı oluşturur ve Red-Black Tree’ye ekler.
 
-kullanici_ekle() Yeni kullanıcı oluşturur ve Red-Black Tree'ye ekler
+arkadas_ekle(): İki kullanıcı arasında arkadaşlık bağlantısı kurar.
 
+dfs(): Derinlik bazlı arkadaş taraması yapar.
 
-arkadaslik_ekle() İki kullanıcı arasında arkadaşlık bağlantısı kurar.
+ortak_arkadaslar(): Ortak arkadaşları listeler.
 
+etki_alani(): Belirli bir kullanıcıya dolaylı/dolaysız ulaşabilecek kullanıcıları verir.
 
-dfs():Derinlik bazlı arkadaş taraması yapar.
+topluluk_tespit(): DFS kullanarak ayrık kullanıcı gruplarını belirler.
 
-
-ortak_arkadas(): İki kullanıcının ortak arkadaşlarını listeler.
-
-
-etki_alani(): Belirli bir kullanıcıdan ulaşılabilecek kullanıcı sayısını verir.
-
-
-topluluk_tespiti(): Bir kullanıcı ile bağlantılı topluluğu (connected component) yazdırır.
-
-
-dosyaya_yaz():Kullanıcı ve arkadaşlık ilişkilerini dosyaya yazar.
-
-
+dosyaya_yaz(): Kullanıcı ve arkadaşlık bilgilerini .txt dosyasına kaydeder.
 
 📌 Notlar
-
 Maksimum kullanıcı sayısı: 100 (#define MAX_KULLANICI 100)
 
-Dosya çıktısı sayesinde ağ verisi dış sistemlerde de kullanılabilir.
+Her kullanıcı benzersiz bir ID ile tanımlanır.
 
-Renkli düğümler ve döndürmelerle Red-Black Tree dengeli kalır.
+Red-Black Tree yapısı dinamik dengelenmiş ağaç olduğu için hızlı arama sağlar.
 
-Hafıza yönetimi manuel yapılmaktadır (malloc).
+Arkadaşlık bağlantıları çift yönlüdür.
 
-📣 Geliştirilebilir Özellikler
+📁 Çıktı Dosyaları
+kullanicilar.txt: Tüm kullanıcılar ve ilişkileri burada listelenir.
 
-Bellek boşaltma (free) eklenebilir.
+Programdan çıkış yapıldığında otomatik oluşturulur.
 
-Etki alanı ve DFS için görselleştirme desteği sağlanabilir.
+Kullanıcılar, ID’leri ve arkadaşları ile birlikte kayıt edilir.
 
-Kullanıcılar isim, yaş gibi diğer bilgilerle genişletilebilir.
+Dosyada son yapılan işlemler güncellenmiş olarak yer alır.
 
-Dosyadan veri alma (parse) özelliği eklenebilir.
-
-
-
-
+Yukarıdaki metni README.md dosyanıza yapıştırarak kullanabilirsiniz. İsterseniz bir .md dosyasına dönüştürüp gönderebilirim. Devam edeyim mi?
